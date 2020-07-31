@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ClickCounter } from './components/ClickCounter';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <h1>Learn React</h1>
+      <h1>Learn Tests</h1>
+      <ClickCounter />
     </div>
   );
-}
-
-export default App;
+};
