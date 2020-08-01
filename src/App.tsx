@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ClickCounter } from './components/ClickCounter';
+import { ClickCounter } from './components/ClickCounter/ClickCounter';
 
 export const App = () => {
   return (
