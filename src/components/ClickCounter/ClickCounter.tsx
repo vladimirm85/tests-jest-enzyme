@@ -15,9 +15,6 @@ export class ClickCounter extends React.Component<{}, StateInterface> {
     return (
       <div data-test="component-click-counter">
         <h1 data-test="counter-display">The count is: {this.state.counter}</h1>
-        {this.state.isError && (
-          <h2 data-test="error-message">The counter cannot go below 0</h2>
-        )}
         <button
           data-test="button-increment"
           onClick={() => {
@@ -43,6 +40,9 @@ export class ClickCounter extends React.Component<{}, StateInterface> {
         >
           -
         </button>
+        {this.state.isError && (
+          <h2 data-test="error-message">The counter cannot go below 0</h2>
+        )}
       </div>
     );
   }
