@@ -1,10 +1,7 @@
 import React from 'react';
-import Enzyme, { shallow, ShallowWrapper } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { shallow, ShallowWrapper } from 'enzyme';
 import { Congrats, CongratsPropsInterface } from './Congrats';
 import { findByTestAttr } from '../../../../utils/testsUtils';
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 const wrapperSetup = (props: CongratsPropsInterface) =>
   shallow(<Congrats {...props} />);
