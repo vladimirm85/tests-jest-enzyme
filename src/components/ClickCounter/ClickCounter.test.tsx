@@ -2,6 +2,7 @@ import React from 'react';
 import Enzyme, { shallow, ShallowWrapper } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { ClickCounter, StateInterface } from './ClickCounter';
+import { findByTestAttr } from '../../../utils/testsUtils';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -17,16 +18,6 @@ const wrapperSetup = (props = {}, state?: StateInterface) => {
   if (state) wrapper.setState(state);
   return wrapper;
 };
-
-/**
- * Function return ShallowWrapper containing node(s) with the given data-test attribute
- * @function findByTestAttr
- * @returns ShallowWrapper
- * @param {ShallowWrapper} wrapper - Enzyme shallow wrapper
- * @param {string} attr - data-test attribute
- */
-const findByTestAttr = (wrapper: ShallowWrapper, attr: string) =>
-  wrapper.find(`[data-test='${attr}']`);
 
 test('renders without error', () => {
   const clickCounterComponent = findByTestAttr(

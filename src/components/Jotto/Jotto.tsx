@@ -3,6 +3,6 @@ import { Congrats } from './Congrats';
 
 export const Jotto = () => (
   <div>
-    <Congrats />
+    <Congrats success={true} />
   </div>
 );
